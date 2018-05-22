@@ -22,7 +22,7 @@ RUN rpm --import http://ftp.iij.ad.jp/pub/linux/fedora/epel/RPM-GPG-KEY-EPEL-6 \
 && rpm -ivh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm \
 && yum-config-manager --enable remi-php72 \
 && yum clean all \
-&& yum -y install php php-mcrypt php-gd php-curl php-mysql php-pdo php-mbstring php-pecl-xdebug php-xml php-common \
+&& yum -y install php php-mcrypt php-gd php-curl php-mysql php-pdo php-mbstring php-pecl-xdebug php-xml php-common php-bcmath \
 && yum -y update && echo '<?php phpinfo(); ?>' > /var/www/html/phpinfo.php \
 && yum clean all
 
